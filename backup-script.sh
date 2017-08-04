@@ -1,12 +1,12 @@
 #!/bin/bash
 
-bucket="test-discourse-backups"
+bucket=${bucket:-test-discourse-backups}
 
-backup_dir="shared/standalone/backups/default"
+backup_dir=${backup_dir:-shared/standalone/backups/default}
 
-days_to_keep=10
+days_to_keep=${days_to_keep:-30}
 
-s3cmd_bin="s3cmd"
+s3cmd_bin=${s3cmd_bin:-s3cmd}
 
 echo "Uploading new backups"
 for file in ${backup_dir}/* ; do
