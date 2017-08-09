@@ -2,7 +2,7 @@
 
 bucket=${bucket:-test-discourse-backups}
 
-backup_dir=${backup_dir:-shared/standalone/backups/default}
+backup_dir=${backup_dir:-/var/discourse/discourse_docker/shared/standalone/backups/default}
 
 days_to_keep=${days_to_keep:-30}
 
